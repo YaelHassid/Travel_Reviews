@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Reviews - Sign Up</title>
+    <link href="{{ url_for('static', filename='css/sign_up.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/suitcase.png') }}">
+
+</head>
+<body>
+<h1>Sign Up</h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+<form class="form_class font" method="post">
+    <label>First name</label>
+    <input type="text" name="f_name" required>
+    <br>
+    <label>Last name</label>
+    <input type="text" name="l_name" required>
+    <br>
+    <label>Username</label>
+    <input type="text" name="username" required>
+    <br>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <br>
+    <input class="font submit" type="submit" value="Save">
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Reviews - Add Location</title>
+    <link href="{{ url_for('static', filename='css/add_location.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/suitcase.png') }}">
+
+</head>
+<body>
+<h1>Add a Location</h1>
+<form class="form_class font" method="post">
+    <label>City</label>
+    <input type="text" name="city" required>
+    <br>
+    <label>Country</label>
+    <input type="text" name="country" required>
+    <br>
+    <label>Photo</label>
+    <input type="text" name="photo" required>
+    <br>
+    <label>Introduction</label>
+    <input type="text" name="introduction" required>
+    <br>
+    <label>Natural Wonders & Landmarks</label>
+    <input type="text" name="landmarks" required>
+    <br>
+    <label>Cultural & Historical Significance</label>
+    <input type="text" name="cultural" required>
+    <br>
+    <label>Activities</label>
+    <input type="text" name="activities" required>
+    <br>
+    <label>Culinary and Local Cuisine</label>
+    <input type="text" name="culinary" required>
+    <br>
+    <input class="font submit" type="submit" value="Save">
+</form>
+</body>
+</html>

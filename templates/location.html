@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ location.city }}, {{ location.country }}</title>
+    <link href="{{ url_for('static', filename='css/location.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/suitcase.png') }}">
+</head>
+<body>
+    <div class="button-container">
+        <!-- Back button -->
+        <button class="font" id="back_Button" onclick="window.history.back();"><i class="fas fa-arrow-left"></i> Back</button>
+        <button class="font" id="review_Button"><a href="{{ url_for('add_review', username=username, location_id=location.id, is_admin=is_admin) }}">Add a review</a></button>
+    </div>
+    <div class="location-container">
+        <img src="{{ location.photo }}" alt="{{ location.city }}">
+        <h1>{{ location.city }}, {{ location.country }}</h1>
+
+        <div class="font location-info">
+            <h3><i class="fas fa-info-circle"></i> Introduction:</h3>
+            <p>{{ location.introduction }}</p>
+
+            <h3><i class="fas fa-map"></i> Landmarks:</h3>
+            <p>{{ location.landmarks }}</p>
+
+            <h3><i class="fas fa-university"></i> Cultural & Historical Significance:</h3>
+            <p>{{ location.cultural }}</p>
+
+            <h3><i class="fas fa-walking"></i> Activities:</h3>
+            <p>{{ location.activities }}</p>
+
+            <h3><i class="fas fa-utensils"></i> Culinary and Local Cuisine:</h3>
+            <p>{{ location.culinary }}</p>
+        </div>
+        <h2 class="font">Reviews:</h2>
+        <div class="reviews-container">
+            {% for review in reviews %}
+                <div class="review">
+                    <div class="by">by: {{ review.by }}</div>
+                    <div class="text">{{ review.review }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

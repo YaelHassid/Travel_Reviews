@@ -1,0 +1,156 @@
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+#back_Button, #add_Button, #Logout_Button {
+  background-color: #B9B8AD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+#back_Button a, #add_Button a, #Logout_Button a {
+  color: #EAE9E0;
+  text-decoration: none;
+}
+#back_Button {
+  position: fixed; /* Change position to fixed for it to be fixed relative to the viewport */
+  top: 10px;
+  left: 10px;
+}
+
+#Logout_Button {
+  position: fixed; /* Change position to fixed for it to be fixed relative to the viewport */
+  top: 10px;
+  left: 30px; /* Adjust the left position to create space between the buttons */
+}
+
+#add_Button {
+  position: fixed; /* Change position to fixed for it to be fixed relative to the viewport */
+  top: 70px;
+  left: 30px; /* Adjust the left position to create space between the buttons */
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-item {
+  text-align: center;
+  width: 350px; /* Adjust the width of each item as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-item:hover img {
+  transform: scale(1.1); /* Increase scale on hover */
+}
+
+h3 {
+  margin-top: 10px;
+  color: red;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-item:hover h3 {
+  display: block;
+  opacity: 1;
+}
+
+.clearfix {
+  width: 100%;
+  clear: both;
+}
+
+.font {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #EAE9E0;
+
+}
+
+.font a {
+  color: #EAE9E0;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: #EAE9E0;
+}
+
+.button-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+h2 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #EAE9E0;
+  margin-left: 150px; /* Adjust margin as needed */
+  top: 10px;
+
+
+}
+
+#SignIn_Button,
+#SignUp_Button {
+  background-color: #B9B8AD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+#SignIn_Button {
+  left: 10px;
+}
+
+#SignUp_Button {
+  left: 130px; /* Adjust the left position to create space between the buttons */
+}
+
+#SignIn_Button a,
+#SignUp_Button a {
+  color: #EAE9E0;
+  text-decoration: none;
+}

@@ -1,0 +1,101 @@
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#back_Button, #review_Button {
+  background-color: #B9B8AD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+#back_Button a, #review_Button a {
+  color: #EAE9E0;
+  text-decoration: none;
+}
+
+.location-container {
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgba(185, 184, 173, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 900px;
+}
+
+.location-container img {
+  border-radius: 10px;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.location-container h1 {
+  color: #EAE9E0;
+  font-family: "Gochi Hand", cursive;
+}
+
+.font {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #EAE9E0;
+}
+
+.location-info {
+  color: #EAE9E0;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.location-info h3 {
+  margin-top: 20px;
+}
+
+.review {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(185, 184, 173, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #EAE9E0;
+  position: relative;
+}
+
+.review .by {
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.review .text {
+  margin-top: 40px;
+  text-align: left; /* Align the text to the left */
+}

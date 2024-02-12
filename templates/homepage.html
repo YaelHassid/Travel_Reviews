@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Reviews - Home Page</title>
+    <link href="{{ url_for('static', filename='css/homepage.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/suitcase.png') }}">
+</head>
+<body>
+    <div class="button-container">
+        {% if username == "Anonymous" %}
+            <button class="font" id="SignIn_Button"><a href="{{ url_for('sign_in') }}">Sign in</a></button>
+            <button class="font" id="SignUp_Button"><a href="{{ url_for('sign_up') }}">Sign up</a></button>
+        {% else %}
+            <h2>Hello {{username}},</h2> 
+            <button class="font" id="Logout_Button"><a href="{{ url_for('homePage', username='Anonymous', is_admin=0) }}">Logout</a></button>
+        {% endif %}
+        {%  if is_admin == 1 %}
+            <button class="font" id="add_Button"><a href="{{ url_for('add_location', is_admin=is_admin, username=username) }}">Add a location</a></button>
+        {%  endif %}
+    </div>
+    
+    <h1>Choose your location</h1>
+    <div class="image-container">
+        {% for location in locations %}
+            <div class="image-item">
+                <a href="{{ url_for('view_location', location_id=location.id, username=username, is_admin=is_admin) }}">
+                    <img src="{{ location.photo }}" alt="Smiley face">
+                    <h3 class="font">{{ location.city }}, {{ location.country }}</h3>
+                </a>
+            </div>
+            {% if loop.index % 3 == 0 %}
+                <div class="clearfix"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

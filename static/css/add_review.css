@@ -1,0 +1,74 @@
+textarea {
+  width: 500px;
+  height: 150px; /* Set the initial height of the textarea */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Rest of your CSS styles */
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_1280.jpg');
+  background-size: 100% auto; /* 100% width, auto height */
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ellipse-form {
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the content inside the form */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.submit {
+  background-color: transparent;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto; /* Center the button by setting margin-left and margin-right to auto */
+  display: block; /* Ensure the button takes the full width */
+}
+
+h1 {
+  text-align: center;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #EAE9E0;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.form_class {
+  justify-content: center;
+  background-color: rgba(185, 184, 173, 0.8); /* Half-transparent background color */
+  padding: 20px 20px 10px; /* Add some padding to the top, right, and bottom */
+  border-radius: 15px; /* Increase border-radius for softer edges */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.font {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #EAE9E0;
+  justify-content: center;
+  font-size: 25px;
+}
